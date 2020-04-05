@@ -157,6 +157,7 @@ vim-mode-bindkey viins       -- delete-char-or-list                '^D'
 vim-mode-bindkey viins       -- backward-delete-char               '^H'
 vim-mode-bindkey viins       -- backward-delete-char               '^?'
 vim-mode-bindkey viins       -- redisplay                          '^X^R'
+vim-mode-bindkey viins       -- exchange-point-and-mark            '^X^X'
 vim-mode-bindkey viins       -- run-help                           '^[h'
 
 vim-mode-bindkey       vicmd -- run-help                           'H'
