@@ -175,6 +175,10 @@ if [[ -z $VIM_MODE_NO_DEFAULT_BINDINGS ]]; then
     vim-mode-bindkey viins vicmd -- up-line-or-history                 PgUp
     vim-mode-bindkey viins vicmd -- down-line-or-history               PgDown
 
+    vim-mode-bindkey vicmd       -- end-of-buffer-or-history           'G'
+    vim-mode-bindkey vicmd       -- up-line                            gk
+    vim-mode-bindkey vicmd       -- down-line                          gj
+
     vim-mode-bindkey viins       -- overwrite-mode                     Insert
     vim-mode-bindkey viins       -- delete-char                        Delete
     vim-mode-bindkey viins       -- reverse-menu-complete              Shift-Tab
