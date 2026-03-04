@@ -142,7 +142,7 @@ if [[ -z $VIM_MODE_NO_DEFAULT_BINDINGS ]]; then
     vim-mode-maybe-bind() {
         local k="$1"; shift
         if (( $+VIM_MODE_VICMD_KEY )) \
-            || [[ ${VIM_MODE_ESC_PREFIXED_WANTED-^?^Hbdf.g} = *${k}* ]];
+            || [[ ${VIM_MODE_ESC_PREFIXED_WANTED-^?^H^Mbdf.g} = *${k}* ]];
         then
             vim-mode-bindkey "$@"
         fi
@@ -150,6 +150,7 @@ if [[ -z $VIM_MODE_NO_DEFAULT_BINDINGS ]]; then
 
     vim-mode-maybe-bind '^?' viins vicmd -- backward-kill-word         '^[^?'
     vim-mode-maybe-bind '^H' viins vicmd -- backward-kill-word         '^[^H'
+    vim-mode-maybe-bind '^M' viins vicmd -- self-insert-unmeta         '^[^M'
     vim-mode-maybe-bind b viins vicmd -- backward-word                 '^[b'
     vim-mode-maybe-bind d viins vicmd -- kill-word                     '^[d'
     vim-mode-maybe-bind f viins vicmd -- forward-word                  '^[f'
